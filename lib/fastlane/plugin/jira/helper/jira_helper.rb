@@ -13,8 +13,8 @@ module Fastlane
         issues
           .group_by { |i| i.issuetype.name }
           .map { |k, v| 
-            titles = v.map { |i| "#{i.key}: #{i.summary}" }.join("\n")
-            "- #{k}:\n#{titles}"
+            titles = v.map { |i| "- #{i.key}: #{i.summary}" }.join("\n")
+            "#{k}:\n#{titles}"
           }
           .join("\n")
       end
